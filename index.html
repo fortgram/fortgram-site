@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FortGram — a safer Telegram for kids</title>
+  <meta name="description" content="FortGram is an Android Telegram client for children, used together with Google Family Link as part of a parental control setup.">
+  <style>
+    :root {
+      --bg: #0e1621;
+      --panel: #17212b;
+      --accent: #5eb5f7;
+      --accent-strong: #3390ec;
+      --text: #e7eef5;
+      --muted: #8aa0b3;
+      --border: #243949;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+    header {
+      padding: 72px 0 48px;
+      text-align: center;
+      background:
+        radial-gradient(1200px 400px at 50% -10%, rgba(51,144,236,0.18), transparent 60%);
+    }
+    .logo {
+      width: 88px; height: 88px;
+      border-radius: 22px;
+      margin: 0 auto 24px;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, var(--accent-strong), #2b7fd4);
+      box-shadow: 0 12px 40px rgba(51,144,236,0.35);
+    }
+    .logo svg { width: 48px; height: 48px; }
+    h1 { font-size: 2.6rem; margin: 0 0 12px; letter-spacing: -0.02em; }
+    .tagline { font-size: 1.2rem; color: var(--muted); margin: 0 auto; max-width: 520px; }
+
+    .lang-toggle {
+      display: inline-flex; gap: 4px;
+      margin: 28px 0 0;
+      padding: 4px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+    }
+    .lang-toggle button {
+      font: inherit;
+      cursor: pointer;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      padding: 6px 18px;
+      border-radius: 999px;
+      transition: all .15s ease;
+    }
+    .lang-toggle button.active {
+      background: var(--accent-strong);
+      color: #fff;
+    }
+
+    main { padding: 16px 0 64px; }
+    section { padding: 28px 0; border-top: 1px solid var(--border); }
+    section:first-child { border-top: 0; }
+    h2 { font-size: 1.4rem; margin: 0 0 14px; }
+
+    .cards { display: grid; gap: 14px; grid-template-columns: 1fr; }
+    @media (min-width: 560px) { .cards { grid-template-columns: 1fr 1fr; } }
+    .card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      transition: border-color .15s ease, transform .15s ease;
+    }
+    .card:hover { border-color: var(--accent-strong); transform: translateY(-2px); text-decoration: none; }
+    .card h3 { margin: 0 0 4px; font-size: 1.05rem; color: var(--text); }
+    .card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+
+    .steps { counter-reset: step; list-style: none; padding: 0; margin: 0; }
+    .steps li {
+      position: relative;
+      padding: 4px 0 16px 44px;
+      color: var(--text);
+    }
+    .steps li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute; left: 0; top: 0;
+      width: 30px; height: 30px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--accent-strong);
+      color: #fff;
+      border-radius: 50%;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0 48px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+    .lang-en, .lang-ru { display: none; }
+    body[data-lang="en"] .lang-en { display: revert; }
+    body[data-lang="ru"] .lang-ru { display: revert; }
+    body[data-lang="en"] .cards.lang-en,
+    body[data-lang="ru"] .cards.lang-ru { display: grid; }
+  </style>
+</head>
+<body data-lang="en">
+  <header>
+    <div class="wrap">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L4 5v6c0 4.5 3.1 8.3 8 9.5 4.9-1.2 8-5 8-9.5V5l-8-3z" fill="#fff" fill-opacity="0.95"/>
+          <path d="M9 11.5l2 2 4-4.5" stroke="#3390ec" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h1>FortGram</h1>
+      <p class="tagline lang-en">A Telegram client for children, with built-in parental control features.</p>
+      <p class="tagline lang-ru">Telegram-клиент для детей со встроенными функциями родительского контроля.</p>
+
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-set-lang="en" class="active">EN</button>
+        <button type="button" data-set-lang="ru">RU</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- What it is -->
+    <section>
+      <div class="lang-en">
+        <h2>What is FortGram?</h2>
+        <p>FortGram is an Android Telegram client for children, with parental control features built into the app itself. It replaces the standard Telegram app and gives parents a safer, more manageable messenger for their kids.</p>
+        <p>It pairs well with any device-level parental control setup (for example, Google Family Link), but doesn't depend on a specific one.</p>
+        <p>It is a fork of <a href="https://github.com/TGX-Android/Telegram-X">Telegram X</a> and lives in a separate repository.</p>
+      </div>
+      <div class="lang-ru">
+        <h2>Что такое FortGram?</h2>
+        <p>FortGram — Android-клиент Telegram для детей, в который встроены функции родительского контроля. Он заменяет стандартное приложение Telegram и даёт родителям более безопасный и управляемый мессенджер для ребёнка.</p>
+        <p>Он хорошо сочетается с любой системой родительского контроля на уровне устройства (например, Google Family Link), но не привязан к какой-то конкретной.</p>
+        <p>Это форк <a href="https://github.com/TGX-Android/Telegram-X">Telegram X</a>, который живёт в отдельном репозитории.</p>
+      </div>
+    </section>
+
+    <!-- Setup -->
+    <section>
+      <div class="lang-en">
+        <h2>How to set it up</h2>
+        <ol class="steps">
+          <li><strong>Prepare the device</strong> — remove the standard Telegram app; optionally enable a device-level parental control tool.</li>
+          <li><strong>Prepare the account</strong> — set a cloud password on the child's Telegram account, open a parent-side session, review the contact list.</li>
+          <li><strong>Set up the client</strong> — install FortGram, set a parental PIN, configure content filters and contact controls.</li>
+        </ol>
+      </div>
+      <div class="lang-ru">
+        <h2>Как настроить</h2>
+        <ol class="steps">
+          <li><strong>Подготовить устройство</strong> — удалить стандартный Telegram; по желанию — включить систему родительского контроля на уровне устройства.</li>
+          <li><strong>Подготовить аккаунт</strong> — поставить облачный пароль на аккаунт ребёнка, открыть родительскую сессию, проверить список контактов.</li>
+          <li><strong>Настроить клиент</strong> — установить FortGram, задать родительский PIN, настроить фильтры контента и управление контактами.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Docs -->
+    <section>
+      <h2 class="lang-en">Documentation</h2>
+      <h2 class="lang-ru">Документация</h2>
+
+      <div class="cards lang-en">
+        <a class="card" href="https://github.com/fortgram/fortgram-site/blob/main/docs/quickstart.md">
+          <h3>Quick Start →</h3>
+          <p>A three-step path through the docs.</p>
+        </a>
+        <a class="card" href="https://github.com/fortgram/fortgram-site/blob/main/docs/about.md">
+          <h3>About the project →</h3>
+          <p>What this is and why it exists.</p>
+        </a>
+        <a class="card" href="https://github.com/fortgram/fortgram-site/blob/main/docs/roadmap.md">
+          <h3>Roadmap →</h3>
+          <p>Direction and funding status.</p>
+        </a>
+        <a class="card" href="https://github.com/fortgram/fortgram-site/blob/main/docs/support.md">
+          <h3>How to support →</h3>
+          <p>Donation channels and commitments.</p>
+        </a>
+      </div>
+
+      <div class="cards lang-ru">
+        <a class="card" href="https://github.com/fortgram/fortgram-site/blob/main/docs/quickstart.md">
+          <h3>Быстрый старт →</h3>
+          <p>Короткий маршрут по документации.</p>
+        </a>
+        <a class="card" href="https://github.com/fortgram/fortgram-site/blob/main/docs/about.md">
+          <h3>О проекте →</h3>
+          <p>Что это и зачем.</p>
+        </a>
+        <a class="card" href="https://github.com/fortgram/fortgram-site/blob/main/docs/roadmap.md">
+          <h3>Дорожная карта →</h3>
+          <p>Направление и статус финансирования.</p>
+        </a>
+        <a class="card" href="https://github.com/fortgram/fortgram-site/blob/main/docs/support.md">
+          <h3>Как поддержать →</h3>
+          <p>Каналы донатов и обязательства проекта.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p class="lang-en">FortGram is an independent project and is not affiliated with Telegram or Google. A fork of Telegram&nbsp;X.</p>
+    <p class="lang-ru">FortGram — независимый проект, не связанный с Telegram или Google. Форк Telegram&nbsp;X.</p>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('[data-set-lang]');
+    buttons.forEach(btn => btn.addEventListener('click', () => {
+      const lang = btn.dataset.setLang;
+      document.body.dataset.lang = lang;
+      document.documentElement.lang = lang;
+      buttons.forEach(b => b.classList.toggle('active', b === btn));
+    }));
+  </script>
+</body>
+</html>
