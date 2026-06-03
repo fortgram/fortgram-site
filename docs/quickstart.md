@@ -1,3 +1,5 @@
+> 🇷🇺 **Документ на двух языках.** Чтобы читать на русском — [нажмите сюда: Быстрый старт →](#быстрый-старт)
+
 # Quick Start
 
 This page is the short path through the setup — three stages with links to the detailed guides.
@@ -44,6 +46,8 @@ See [FortGram setup](./fortgram.md#installation).
 ---
 
 # Быстрый старт
+
+> 🇬🇧 [Read in English ↑](#quick-start)
 
 Короткий маршрут по настройке — три этапа со ссылками на подробные гайды.
 
