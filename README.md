@@ -38,6 +38,8 @@ It pairs well with any device-level parental control setup (for example, Google 
 ## 📚 Documentation
 
 - [Quick Start](./docs/quickstart.md) — the short path through the setup
+- [Android setup](./docs/android.md) — preparing the device with Family Link
+- [Disclaimer](./docs/DISCLAIMER.md) — legal and attribution
 - *More guides coming soon (overview, about, roadmap, support).*
 
 ---
@@ -65,6 +67,8 @@ It pairs well with any device-level parental control setup (for example, Google 
 ## 📚 Документация
 
 - [Быстрый старт](./docs/quickstart.md#быстрый-старт) — короткий маршрут по настройке
+- [Настройка Android](./docs/android.md#настройка-android--google-family-link) — подготовка устройства через Family Link
+- [Дисклеймер](./docs/DISCLAIMER.md#дисклеймер) — юридическая часть и атрибуция
 - *Скоро добавятся остальные разделы (обзор, о проекте, дорожная карта, поддержка).*
 
 ---
