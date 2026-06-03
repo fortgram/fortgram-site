@@ -11,11 +11,13 @@
 [![Fork of Telegram X](https://img.shields.io/badge/fork%20of-Telegram%20X-2b7fd4?style=flat-square)](https://github.com/TGX-Android/Telegram-X)
 [![Platform](https://img.shields.io/badge/platform-Android-3ddc84?style=flat-square)](#)
 
-[Website](https://fgram.org) · [Quick Start](./docs/quickstart.md) · [Русский](#-о-проекте)
+🌐 [English](#lang-en) · [Русский](#lang-ru) &nbsp;|&nbsp; [Website](https://fgram.org) · [Quick Start](./docs/quickstart.md)
 
 </div>
 
 ---
+
+<a id="lang-en"></a>
 
 ## 🛡️ About the project
 
@@ -44,7 +46,7 @@ It pairs well with any device-level parental control setup (for example, Google 
 
 ---
 
-<a id="-о-проекте"></a>
+<a id="lang-ru"></a>
 
 ## 🛡️ О проекте
 

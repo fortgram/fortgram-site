@@ -1,4 +1,5 @@
-> 🇷🇺 **Документ на двух языках.** Чтобы читать на русском — [нажмите сюда: Дисклеймер →](#дисклеймер)
+<a id="lang-en"></a>
+🌐 **Languages / Языки:** [English](#lang-en) · [Русский](#lang-ru)
 
 # Disclaimer
 
@@ -12,9 +13,10 @@ This application is an independent third-party client and is not affiliated with
 
 ---
 
-# Дисклеймер
+<a id="lang-ru"></a>
+🌐 **Languages / Языки:** [English](#lang-en) · [Русский](#lang-ru)
 
-> 🇬🇧 [Read in English ↑](#disclaimer)
+# Дисклеймер
 
 Telegram не предназначен для использования детьми младше минимального возраста, указанного в применимых Условиях использования и политиках Telegram.
 

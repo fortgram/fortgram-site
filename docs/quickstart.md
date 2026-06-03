@@ -1,4 +1,5 @@
->  Читать на русском — [нажмите сюда: Быстрый старт →](#быстрый-старт)
+<a id="lang-en"></a>
+🌐 **Languages / Языки:** [English](#lang-en) · [Русский](#lang-ru)
 
 # Quick Start
 
@@ -45,9 +46,10 @@ See [FortGram setup](./fortgram.md#installation).
 
 ---
 
-# Быстрый старт
+<a id="lang-ru"></a>
+🌐 **Languages / Языки:** [English](#lang-en) · [Русский](#lang-ru)
 
-> 🇬🇧 [Read in English ↑](#quick-start)
+# Быстрый старт
 
 Короткий маршрут по настройке — три этапа со ссылками на подробные гайды.
 

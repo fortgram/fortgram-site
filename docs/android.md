@@ -1,4 +1,5 @@
-> 🇷🇺 **Документ на двух языках.** Чтобы читать на русском — [нажмите сюда: Настройка Android →](#настройка-android--google-family-link)
+<a id="lang-en"></a>
+🌐 **Languages / Языки:** [English](#lang-en) · [Русский](#lang-ru)
 
 # Android Setup — Google Family Link
 
@@ -22,10 +23,11 @@ Full documentation and setup guide: [families.google.com/familylink](https://fam
 
 ---
 
+<a id="lang-ru"></a>
+🌐 **Languages / Языки:** [English](#lang-en) · [Русский](#lang-ru)
+
 # Настройка Android — Google Family Link
 
-> 🇬🇧 [Read in English ↑](#android-setup--google-family-link)
->
 > Family Link — лишь один из примеров инструментов родительского контроля на уровне устройства. FortGram работает и с другими; этот гайд просто описывает самый распространённый вариант.
 
 Google Family Link позволяет управлять устройством ребёнка удалённо: одобрять установку приложений, устанавливать лимиты экранного времени и просматривать активность.
