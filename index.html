@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FortGram — a safer Telegram for kids</title>
   <meta name="description" content="FortGram is an Android Telegram client for children, used together with Google Family Link as part of a parental control setup.">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+  <link rel="apple-touch-icon" href="/assets/logo-512.png">
+  <meta name="theme-color" content="#3390ec">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FortGram — a safer Telegram for kids">
+  <meta property="og:description" content="An Android Telegram client for children, with parental controls built into the app.">
+  <meta property="og:url" content="https://fgram.org/">
+  <meta property="og:image" content="https://fgram.org/assets/logo-512.png">
+  <meta name="twitter:card" content="summary">
   <style>
     :root {
       --bg: #0e1621;
@@ -39,11 +48,9 @@
       width: 88px; height: 88px;
       border-radius: 22px;
       margin: 0 auto 24px;
-      display: flex; align-items: center; justify-content: center;
-      background: linear-gradient(135deg, var(--accent-strong), #2b7fd4);
       box-shadow: 0 12px 40px rgba(51,144,236,0.35);
     }
-    .logo svg { width: 48px; height: 48px; }
+    .logo img { display: block; width: 100%; height: 100%; border-radius: 22px; }
     h1 { font-size: 2.6rem; margin: 0 0 12px; letter-spacing: -0.02em; }
     .tagline { font-size: 1.2rem; color: var(--muted); margin: 0 auto; max-width: 520px; }
 
@@ -69,6 +76,28 @@
       background: var(--accent-strong);
       color: #fff;
     }
+
+    .cta { gap: 12px; justify-content: center; flex-wrap: wrap; margin: 32px 0 0; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 12px 22px;
+      border-radius: 12px;
+      font-weight: 600;
+      color: #fff;
+      background: var(--accent-strong);
+      box-shadow: 0 8px 24px rgba(51,144,236,0.3);
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+    .btn:hover { text-decoration: none; transform: translateY(-1px); box-shadow: 0 10px 28px rgba(51,144,236,0.4); }
+    .btn.secondary {
+      color: var(--text);
+      background: var(--panel);
+      border: 1px solid var(--border);
+      box-shadow: none;
+    }
+    .btn.secondary:hover { border-color: var(--accent-strong); }
+    .btn svg { width: 20px; height: 20px; fill: currentColor; }
+    .btn small { font-weight: 400; color: rgba(255,255,255,0.75); font-size: 0.85em; }
 
     main { padding: 16px 0 64px; }
     section { padding: 28px 0; border-top: 1px solid var(--border); }
@@ -120,20 +149,45 @@
     body[data-lang="ru"] .lang-ru { display: revert; }
     body[data-lang="en"] .cards.lang-en,
     body[data-lang="ru"] .cards.lang-ru { display: grid; }
+    body[data-lang="en"] .cta.lang-en,
+    body[data-lang="ru"] .cta.lang-ru { display: flex; }
   </style>
 </head>
 <body data-lang="en">
+  <script>
+    // Language: a choice made on this device wins; otherwise Russian for Russian-language browsers, English for everyone else.
+    (function () {
+      let saved = null;
+      try { saved = localStorage.getItem('fortgram-lang'); } catch (e) {}
+      const browser = (navigator.languages || [navigator.language || '']).some(l => /^ru(-|$)/i.test(l)) ? 'ru' : 'en';
+      const lang = (saved === 'ru' || saved === 'en') ? saved : browser;
+      document.body.dataset.lang = lang;
+      document.documentElement.lang = lang;
+    })();
+  </script>
   <header>
     <div class="wrap">
-      <div class="logo" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2L4 5v6c0 4.5 3.1 8.3 8 9.5 4.9-1.2 8-5 8-9.5V5l-8-3z" fill="#fff" fill-opacity="0.95"/>
-          <path d="M9 11.5l2 2 4-4.5" stroke="#3390ec" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+      <div class="logo">
+        <img src="/assets/logo.svg" width="88" height="88" alt="FortGram logo">
       </div>
       <h1>FortGram</h1>
       <p class="tagline lang-en">A Telegram client for children, with built-in parental control features.</p>
       <p class="tagline lang-ru">Telegram-клиент для детей со встроенными функциями родительского контроля.</p>
+
+      <div class="cta lang-en">
+        <a class="btn" href="https://github.com/fortgram/fortgram/releases/latest">Download APK <small>Android 7.0+, arm64</small></a>
+        <a class="btn secondary" href="https://github.com/fortgram/fortgram">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          Source on GitHub
+        </a>
+      </div>
+      <div class="cta lang-ru">
+        <a class="btn" href="https://github.com/fortgram/fortgram/releases/latest">Скачать APK <small>Android 7.0+, arm64</small></a>
+        <a class="btn secondary" href="https://github.com/fortgram/fortgram">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          Исходники на GitHub
+        </a>
+      </div>
 
       <div class="lang-toggle" role="group" aria-label="Language">
         <button type="button" data-set-lang="en" class="active">EN</button>
@@ -193,10 +247,6 @@
           <h3>Android setup →</h3>
           <p>Preparing the device with Family Link.</p>
         </a>
-        <a class="card" href="https://github.com/fortgram/fortgram/releases">
-          <h3>Download →</h3>
-          <p>APK on GitHub Releases (Android 7.0+, arm64).</p>
-        </a>
       </div>
 
       <div class="cards lang-ru">
@@ -207,10 +257,6 @@
         <a class="card" href="https://github.com/fortgram/fortgram-site/blob/main/docs/android.md">
           <h3>Настройка Android →</h3>
           <p>Подготовка устройства через Family Link.</p>
-        </a>
-        <a class="card" href="https://github.com/fortgram/fortgram/releases">
-          <h3>Скачать →</h3>
-          <p>APK на GitHub Releases (Android 7.0+, arm64).</p>
         </a>
       </div>
     </section>
@@ -223,11 +269,14 @@
 
   <script>
     const buttons = document.querySelectorAll('[data-set-lang]');
+    const syncToggle = () => buttons.forEach(b => b.classList.toggle('active', b.dataset.setLang === document.body.dataset.lang));
+    syncToggle();
     buttons.forEach(btn => btn.addEventListener('click', () => {
       const lang = btn.dataset.setLang;
       document.body.dataset.lang = lang;
       document.documentElement.lang = lang;
-      buttons.forEach(b => b.classList.toggle('active', b === btn));
+      try { localStorage.setItem('fortgram-lang', lang); } catch (e) {}
+      syncToggle();
     }));
   </script>
 </body>
