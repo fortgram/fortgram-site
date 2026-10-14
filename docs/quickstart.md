@@ -22,18 +22,25 @@ Prepare the child's Telegram account from the parent's side:
 - Open a parent-side session to monitor account activity.
 - Review and limit the child's contact list.
 
+See [Child account preparation](./fortgram.md#child-account-preparation).
+
 ## Stage 3 — Client setup
 
 Install and configure FortGram on the child's device:
 
 - Install FortGram as the only Telegram client.
 - Set a parental PIN — the child can use the app but can't change its settings.
-- Configure content filters, allowed contact types, and other in-app controls.
+- Switch on **Whitelist mode**, allow the right groups and extra contacts, optionally restrict sticker packs.
+- Export the settings (file or QR code) so they can be restored or copied to another phone.
+- On Xiaomi/realme/Huawei/Samsung, go through **Background work and calls** so calls arrive when the app is closed.
+
+See [How it works](./fortgram.md) — [Installation](./fortgram.md#installation), [Backup, transfer and QR](./fortgram.md#backup-transfer-and-qr), [Background work and calls](./fortgram.md#background-work-and-calls).
 
 ---
 
 ## Learn more
 
+- [How it works](./fortgram.md) — architecture, every parental control explained, backup and QR, installation
 - [Source code and downloads](https://github.com/fortgram/fortgram) — the app repository and its Releases page
 - [Disclaimer](./DISCLAIMER.md) — legal and attribution
 
@@ -63,17 +70,24 @@ Install and configure FortGram on the child's device:
 - Открыть родительскую сессию для наблюдения за активностью аккаунта.
 - Проверить и ограничить список контактов ребёнка.
 
+См. [Подготовка детского аккаунта](./fortgram.md#подготовка-детского-аккаунта).
+
 ## Этап 3 — Настройка клиента
 
 Установить и настроить FortGram на устройстве ребёнка:
 
 - Установить FortGram как единственный Telegram-клиент.
 - Задать родительский PIN — ребёнок может пользоваться приложением, но не может менять его настройки.
-- Настроить фильтры контента, допустимые типы контактов и другие встроенные элементы управления.
+- Включить **Режим белого списка**, разрешить нужные группы и дополнительные контакты, при желании ограничить стикерпаки.
+- Экспортировать настройки (файл или QR-код), чтобы их можно было восстановить или перенести на другой телефон.
+- На Xiaomi/realme/Huawei/Samsung пройти экран **Фоновая работа и звонки**, чтобы звонки приходили при закрытом приложении.
+
+См. [Как это работает](./fortgram.md#fortgram--как-это-работает) — [Установка](./fortgram.md#установка), [Резервная копия, перенос и QR](./fortgram.md#резервная-копия-перенос-и-qr), [Фоновая работа и звонки](./fortgram.md#фоновая-работа-и-звонки).
 
 ---
 
 ## Подробнее
 
+- [Как это работает](./fortgram.md#fortgram--как-это-работает) — архитектура, все функции родительского контроля, резервная копия и QR, установка
 - [Исходный код и загрузки](https://github.com/fortgram/fortgram) — репозиторий приложения и его страница Releases
 - [Дисклеймер](./DISCLAIMER.md) — юридическая часть и атрибуция
