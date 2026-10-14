@@ -22,8 +22,6 @@ Prepare the child's Telegram account from the parent's side:
 - Open a parent-side session to monitor account activity.
 - Review and limit the child's contact list.
 
-See [Child account preparation](./fortgram.md#child-account-preparation).
-
 ## Stage 3 — Client setup
 
 Install and configure FortGram on the child's device:
@@ -32,16 +30,11 @@ Install and configure FortGram on the child's device:
 - Set a parental PIN — the child can use the app but can't change its settings.
 - Configure content filters, allowed contact types, and other in-app controls.
 
-See [FortGram setup](./fortgram.md#installation).
-
 ---
 
 ## Learn more
 
-- [Overview](./overview.md) — what FortGram is and how it fits into a parental control setup
-- [About the project](./about.md) — why this exists and what it is (and is not)
-- [Roadmap](./roadmap.md) — where the project is going
-- [How to support](./support.md) — funding and project commitments
+- [Source code and downloads](https://github.com/fortgram/fortgram) — the app repository and its Releases page
 - [Disclaimer](./DISCLAIMER.md) — legal and attribution
 
 ---
@@ -70,8 +63,6 @@ See [FortGram setup](./fortgram.md#installation).
 - Открыть родительскую сессию для наблюдения за активностью аккаунта.
 - Проверить и ограничить список контактов ребёнка.
 
-См. [Подготовка детского аккаунта](./fortgram.md#подготовка-детского-аккаунта).
-
 ## Этап 3 — Настройка клиента
 
 Установить и настроить FortGram на устройстве ребёнка:
@@ -80,14 +71,9 @@ See [FortGram setup](./fortgram.md#installation).
 - Задать родительский PIN — ребёнок может пользоваться приложением, но не может менять его настройки.
 - Настроить фильтры контента, допустимые типы контактов и другие встроенные элементы управления.
 
-См. [Установка FortGram](./fortgram.md#установка).
-
 ---
 
 ## Подробнее
 
-- [Обзор](./overview.md) — что такое FortGram и как он вписывается в систему родительского контроля
-- [О проекте](./about.md) — зачем это и чем не является
-- [Дорожная карта](./roadmap.md) — куда движется проект
-- [Как поддержать](./support.md) — финансирование и обязательства проекта
+- [Исходный код и загрузки](https://github.com/fortgram/fortgram) — репозиторий приложения и его страница Releases
 - [Дисклеймер](./DISCLAIMER.md) — юридическая часть и атрибуция
