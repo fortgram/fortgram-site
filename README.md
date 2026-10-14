@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/logo.svg" width="96" height="96" alt="FortGram logo">
+<img src="./assets/logo-mark.png" width="96" height="96" alt="FortGram logo">
 
 # FortGram
 
