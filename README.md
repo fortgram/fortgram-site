@@ -40,6 +40,7 @@ It pairs well with any device-level parental control setup (for example, Google 
 ## 📚 Documentation
 
 - [Quick Start](./docs/quickstart.md) — the short path through the setup
+- [How it works](./docs/fortgram.md) — architecture, every parental control explained, child account preparation, backup and QR, installation
 - [Android setup](./docs/android.md) — preparing the device with Family Link
 - [Disclaimer](./docs/DISCLAIMER.md) — legal and attribution
 - *More guides coming soon (overview, about, roadmap, support).*
@@ -69,6 +70,7 @@ It pairs well with any device-level parental control setup (for example, Google 
 ## 📚 Документация
 
 - [Быстрый старт](./docs/quickstart.md#быстрый-старт) — короткий маршрут по настройке
+- [Как это работает](./docs/fortgram.md#fortgram--как-это-работает) — архитектура, все функции родительского контроля, подготовка детского аккаунта, резервная копия и QR, установка
 - [Настройка Android](./docs/android.md#настройка-android--google-family-link) — подготовка устройства через Family Link
 - [Дисклеймер](./docs/DISCLAIMER.md#дисклеймер) — юридическая часть и атрибуция
 - *Скоро добавятся остальные разделы (обзор, о проекте, дорожная карта, поддержка).*

@@ -21,6 +21,8 @@ Full documentation and setup guide: [families.google.com/familylink](https://fam
 5. **Block standard Telegram** — go to the child's app list in Family Link and block Telegram if it is already installed.
 6. **Install FortGram** — approve the install via Family Link so it becomes the only Telegram client on the device.
 
+Next: prepare the child's account and set up the client — see [How it works](./fortgram.md), starting with [Child account preparation](./fortgram.md#child-account-preparation) and [Installation](./fortgram.md#installation).
+
 ---
 
 <a id="lang-ru"></a>
@@ -45,3 +47,5 @@ Google Family Link позволяет управлять устройством 
    - Фильтрация контента: ограничить материалы для взрослых в Google Play и поиске.
 5. **Заблокировать стандартный Telegram** — в списке приложений ребёнка в Family Link заблокировать Telegram, если он уже установлен.
 6. **Установить FortGram** — одобрить установку через Family Link, чтобы он стал единственным Telegram-клиентом на устройстве.
+
+Дальше — подготовить аккаунт ребёнка и настроить клиент: см. [Как это работает](./fortgram.md#fortgram--как-это-работает), начиная с разделов [Подготовка детского аккаунта](./fortgram.md#подготовка-детского-аккаунта) и [Установка](./fortgram.md#установка).
