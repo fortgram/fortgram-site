@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fgram.org/sitemap.xml

@@ -1,0 +1,42 @@
+# GitHub Pages / Jekyll configuration for fgram.org.
+# index.html is served as-is (layout: null); the Markdown docs are rendered to HTML pages.
+title: FortGram
+tagline: A Telegram client for children, with parental controls built in
+description: FortGram is an Android Telegram client for children. The parent decides who the child can talk to; everything else is hidden. No servers, no analytics. Free and open source.
+url: "https://fgram.org"
+lang: en
+theme: jekyll-theme-primer
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-relative-links
+
+exclude:
+  - README.md
+  - naming-shortlist.md
+  - .claude
+  - LICENSE
+
+# Page titles and descriptions for the rendered docs (kept here so the Markdown files stay plain).
+defaults:
+  - scope:
+      path: "docs/quickstart.md"
+    values:
+      title: "Quick Start — set up FortGram in three stages"
+      description: "Prepare the child's Android device, prepare the Telegram account, install and configure FortGram: parental PIN, whitelist, allowed groups, backup."
+  - scope:
+      path: "docs/fortgram.md"
+    values:
+      title: "How FortGram works — parental controls inside a Telegram client"
+      description: "Whitelist mode, allowed groups and contacts, sticker packs, parental PIN, export and import by file or QR code, background work and calls, installation and known limitations."
+  - scope:
+      path: "docs/android.md"
+    values:
+      title: "Android setup — preparing the child's phone with Google Family Link"
+      description: "Remove the standard Telegram app, restrict installs and screen time with Family Link, allow installing FortGram."
+  - scope:
+      path: "docs/DISCLAIMER.md"
+    values:
+      title: "Disclaimer — FortGram and Telegram, Google, GPL"
+      description: "FortGram is an independent fork of Telegram X, not affiliated with Telegram or Google; what the app does and does not do; no warranty under GPL-3.0."
