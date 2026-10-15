@@ -40,3 +40,8 @@ defaults:
     values:
       title: "Disclaimer — FortGram and Telegram, Google, GPL"
       description: "FortGram is an independent fork of Telegram X, not affiliated with Telegram or Google; what the app does and does not do; no warranty under GPL-3.0."
+  - scope:
+      path: "docs/privacy.md"
+    values:
+      title: "Privacy Policy — what FortGram stores and what leaves the device"
+      description: "FortGram keeps parental settings on the device, talks only to Telegram and uses Firebase solely for push delivery. No servers, no analytics, no telemetry; the website counts page views without cookies."

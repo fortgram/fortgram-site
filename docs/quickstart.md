@@ -42,6 +42,7 @@ See [How it works](./fortgram.md) — [Installation](./fortgram.md#installation)
 
 - [How it works](./fortgram.md) — architecture, every parental control explained, backup and QR, installation
 - [Source code and downloads](https://github.com/fortgram/fortgram) — the app repository and its Releases page
+- [Privacy Policy](./privacy.md) — what the app stores and what leaves the device
 - [Disclaimer](./DISCLAIMER.md) — legal and attribution
 
 ---
@@ -90,4 +91,5 @@ See [How it works](./fortgram.md) — [Installation](./fortgram.md#installation)
 
 - [Как это работает](./fortgram.md#fortgram--как-это-работает) — архитектура, все функции родительского контроля, резервная копия и QR, установка
 - [Исходный код и загрузки](https://github.com/fortgram/fortgram) — репозиторий приложения и его страница Releases
+- [Политика конфиденциальности](./privacy.md#политика-конфиденциальности) — что приложение хранит и что покидает устройство
 - [Дисклеймер](./DISCLAIMER.md) — юридическая часть и атрибуция

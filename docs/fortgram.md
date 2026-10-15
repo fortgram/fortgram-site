@@ -47,7 +47,7 @@ Consequently:
 - **No Google Analytics, no Crashlytics, no ad or attribution SDKs.** The Firebase project behind FortGram has Analytics disabled at project level, and the app is built without the `firebase-analytics` / `firebase-core` libraries (Telegram X excludes them explicitly); `firebase_analytics_collection_deactivated` is set in the manifest as a second guard.
 - **Firebase is used for one thing: Cloud Messaging (push).** The app registers an FCM token with Telegram, and Telegram's servers wake the app through Google's push service, exactly as every Android Telegram client does. The push payload is encrypted by Telegram; Google sees only that a message exists.
 - **No crash reports leave the device.** Crash details can be copied manually from *Settings* and sent by the parent if they choose to.
-- **The app never contacts fgram.org.** The site hosts documentation and downloads; it counts page views without cookies (see the Privacy Policy).
+- **The app never contacts fgram.org.** The site hosts documentation and downloads; it counts page views without cookies (see the [Privacy Policy](./privacy.md#the-website)).
 - The client is open source, so all of the above can be checked in the code rather than taken on trust.
 
 ## Child account preparation
@@ -211,7 +211,7 @@ FortGram не запускает собственный бэкенд, не пр�
 - **Нет Google Analytics, Crashlytics, рекламных и трекинговых SDK.** В Firebase-проекте FortGram Analytics отключён на уровне проекта, а приложение собирается без библиотек `firebase-analytics` / `firebase-core` (Telegram X исключает их явно); в манифесте дополнительно стоит `firebase_analytics_collection_deactivated`.
 - **Firebase используется ровно для одного: Cloud Messaging (push).** Приложение регистрирует FCM-токен в Telegram, и серверы Telegram будят приложение через push-сервис Google — так работает каждый Android-клиент Telegram. Содержимое пуша шифрует Telegram; Google видит лишь факт наличия сообщения.
 - **Отчёты о сбоях не покидают устройство.** Детали сбоя можно скопировать вручную из *Настроек* и отправить самостоятельно, если родитель захочет.
-- **Приложение к fgram.org не обращается.** Сайт раздаёт документацию и файлы; просмотры страниц считаются без cookies (см. Политику конфиденциальности).
+- **Приложение к fgram.org не обращается.** Сайт раздаёт документацию и файлы; просмотры страниц считаются без cookies (см. [Политику конфиденциальности](./privacy.md#сайт)).
 - Клиент с открытым исходным кодом, так что всё перечисленное проверяется по коду, а не принимается на веру.
 
 ## Подготовка детского аккаунта
